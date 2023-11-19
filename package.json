@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "precommit": "lint-staged",
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@mantine/core": "7.2.2",
@@ -25,11 +28,23 @@
     "eslint": "^8.53.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
     "postcss": "^8.4.31",
     "postcss-preset-mantine": "1.11.0",
     "postcss-simple-vars": "^7.0.1",
     "typescript": "^5.2.2",
     "vite": "^4.5.0"
   },
-  "packageManager": "yarn@4.0.1"
+  "packageManager": "yarn@4.0.1",
+  "lint-staged": {
+    "src/*/.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn precommit"
+    }
+  }
 }
