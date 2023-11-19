@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "_id": "1",
+      "title": "Title",
+      "created": "2023-01-01T08:20:30Z",
+      "updated": "2023-01-02T14:10:30Z",
+      "announceName": "Jack Jacklyne",
+      "announceImageUrl": "",
+      "announceRole": "production coordinator",
+      "announceDescription": "Lorem insum dolor sit amet consectetur. Morbi crasamet phasellus diam tincidunt vivamus aliquam Taoreet. rames tincidunt sit tames lorem. Nibh velposuere dis sit eu. Lorem ipsum dolor sit ametconsectetur. Moroi cras amet phasellus diam tincidunt vivamus aliquam laoreet. Fames tincidunt sit fames lorem. Nibh vel posuere dis sit eu. Lorem ipsum doloret consectetur.",
+      "announceStatus": "Needs confirmation"
+    },
+    {
+      "_id": "2",
+      "title": "Title",
+      "created": "2023-01-01T08:20:30Z",
+      "updated": "2023-01-02T14:10:30Z",
+      "announceName": "Jack Jacklyne",
+      "announceImageUrl": "",
+      "announceRole": "production coordinator",
+      "announceDescription": "Lorem insum dolor sit amet consectetur. Morbi crasamet phasellus diam tincidunt vivamus aliquam Taoreet. rames tincidunt sit tames lorem. Nibh velposuere dis sit eu. Lorem ipsum dolor sit ametconsectetur. Moroi cras amet phasellus diam tincidunt vivamus aliquam laoreet. Fames tincidunt sit fames lorem. Nibh vel posuere dis sit eu. Lorem ipsum doloret consectetur.",
+      "announceStatus": "Confirmed"
+    },
+    {
+      "_id": "3",
+      "title": "Title",
+      "created": "2023-01-01T08:20:30Z",
+      "updated": "2023-01-02T14:10:30Z",
+      "announceName": "Jack Jacklyne",
+      "announceImageUrl": "",
+      "announceRole": "production coordinator",
+      "announceDescription": "Lorem insum dolor sit amet consectetur. Morbi crasamet phasellus diam tincidunt vivamus aliquam Taoreet. rames tincidunt sit tames lorem. Nibh velposuere dis sit eu. Lorem ipsum dolor sit ametconsectetur. Moroi cras amet phasellus diam tincidunt vivamus aliquam laoreet. Fames tincidunt sit fames lorem. Nibh vel posuere dis sit eu. Lorem ipsum doloret consectetur.",
+      "announceStatus": "Confirmed"
+    }
+  ]
+}
