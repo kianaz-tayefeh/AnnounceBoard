@@ -8,7 +8,6 @@
     "start": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "precommit": "lint-staged",
     "preview": "vite preview",
     "prepare": "husky install"
   },
@@ -39,7 +38,7 @@
   "packageManager": "yarn@4.0.1",
   "lint-staged": {
     "src/*/.{js,jsx,ts,tsx}": [
-      "eslint --fix"
+      "xx eslint --fix"
     ]
   }
 }
