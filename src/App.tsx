@@ -5,6 +5,7 @@ import { AnnounceDetail } from "src/components/pages/AnnounceDetail";
 
 export default function App() {
   const x = 1;
+  const x = 2;
   return (
     <MantineProvider theme={theme}>
       <AnnounceDetail />
