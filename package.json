@@ -37,8 +37,6 @@
   },
   "packageManager": "yarn@4.0.1",
   "lint-staged": {
-    "src/*/.{js,jsx,ts,tsx}": [
-      "xx eslint --fix"
-    ]
+    "**/*": "eslint --fix"
   }
 }
