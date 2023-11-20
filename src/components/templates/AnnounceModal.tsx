@@ -55,7 +55,7 @@ export const AnnounceModal: React.FC<AnnounceModalPropsType> = ({
       >
         <form onSubmit={onSubmit(handleSubmit)}>
           <Flex
-            direction={{ base: "column", sm: "row" }}
+            direction={{ base: "column", sm: "column" }}
             justify="space-between"
             gap={{ base: "md", sm: "sm" }}
           >
