@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "1",
+    "title": "Title 1",
+    "date": "08/24/2023 12:45 UTC+02",
+    "username": "Jack Jacklyne",
+    "avatar": "public/images/user.png",
+    "role": "Production coordinator",
+    "message": "Lorem ipsum dolor sit amet consectetur. Morbi cras amet phasellus diam tincidunt vivamus aliquam laoreet. Fames tincidunt sit fames lorem. Nibh vel posuere dis sit eu. Lorem ipsum dolor sit amet consectetur. Morbi cras amet phasellus diam tincidunt vivamus aliquam laoreet. Fames tincidunt sit fames lorem. Nibh vel posuere dis sit eu. Lorem ipsum dolor sit amet consectetur...",
+    "termsOfService": false
+  },
+  {
+    "_id": "2",
+    "title": "Title 2",
+    "date": "08/24/2023 12:45 UTC+02",
+    "username": "Jack Jacklyne",
+    "avatar": "public/images/user.png",
+    "role": "Production coordinator",
+    "message": "Lorem ipsum dolor sit amet consectetur. Morbi cras amet phasellus diam tincidunt vivamus aliquam laoreet. Fames tincidunt sit fames lorem. Nibh vel posuere dis sit eu. Lorem ipsum dolor sit amet consectetur. Morbi cras amet phasellus diam tincidunt vivamus aliquam laoreet. Fames tincidunt sit fames lorem. Nibh vel posuere dis sit eu. Lorem ipsum dolor sit amet consectetur...",
+    "termsOfService": true
+  },
+  {
+    "_id": "3",
+    "title": "Title 3",
+    "date": "08/24/2023 12:45 UTC+02",
+    "username": "Jack Jacklyne",
+    "avatar": "public/images/user.png",
+    "role": "Production coordinator",
+    "message": "Lorem ipsum dolor sit amet consectetur. Morbi cras amet phasellus diam tincidunt vivamus aliquam laoreet. Fames tincidunt sit fames lorem. Nibh vel posuere dis sit eu. Lorem ipsum dolor sit amet consectetur. Morbi cras amet phasellus diam tincidunt vivamus aliquam laoreet. Fames tincidunt sit fames lorem. Nibh vel posuere dis sit eu. Lorem ipsum dolor sit amet consectetur...",
+    "termsOfService": false
+  }
+]

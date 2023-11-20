@@ -1,11 +1,14 @@
+import { ChangeEvent } from "react";
+import { useAtom } from "jotai";
 import { TextInput } from "@mantine/core";
-import { useState } from "react";
+
+import { SearchIcon } from "src/assets/icons/SearchIcon";
+import { searchAtom } from "src/contexts/searchAtom";
 
 export const Search = () => {
-  const icon = <>Icon</>;
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useAtom(searchAtom);
 
-  const handleSearch = (event) => {
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 
@@ -14,7 +17,8 @@ export const Search = () => {
       value={searchTerm}
       onChange={handleSearch}
       placeholder="Search"
-      rightSection={icon}
+      rightSection={<SearchIcon />}
+      rightSectionPointerEvents="none"
       size="md"
       w={300}
     />

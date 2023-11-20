@@ -1,3 +1,20 @@
 *.js
 *.cjs
 *.mjs
+
+# dependencies
+package.json
+yarn.lock
+.css
+*.png
+*.css
+*.svg
+*.ttf
+*.woff
+*.woff2
+*.eot
+
+# production
+build
+index.html
+
