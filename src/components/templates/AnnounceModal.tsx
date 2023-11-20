@@ -6,6 +6,7 @@ import {
   Modal,
   TextInput,
   Textarea,
+  Title,
 } from "@mantine/core";
 import { hasLength, useForm } from "@mantine/form";
 import { useAtom } from "jotai";
@@ -49,12 +50,12 @@ export const AnnounceModal: React.FC<AnnounceModalPropsType> = ({
       <Modal
         opened={opened}
         onClose={close}
-        title="Announcement details"
+        title={<Title order={4}>Announcement details</Title>}
         size="xl"
       >
         <form onSubmit={onSubmit(handleSubmit)}>
           <Flex
-            direction={{ base: "row", sm: "column" }}
+            direction={{ base: "column", sm: "row" }}
             justify="space-between"
             gap={{ base: "md", sm: "sm" }}
           >
@@ -65,7 +66,7 @@ export const AnnounceModal: React.FC<AnnounceModalPropsType> = ({
               label="Announcement is Confirmed"
               {...getInputProps("termsOfService", { type: "checkbox" })}
             />
-            <Group justify="flex-end" mt="md">
+            <Group justify="flex-end" mt={{ base: "md", sm: 0 }} gap="md">
               <Button type="button" variant="outline" onClick={close}>
                 Cancel
               </Button>

@@ -46,9 +46,7 @@ export const Announcements = () => {
   return (
     <Box p="xl" mx="xl">
       <AnnounceModal opened={opened} close={close} />
-      <Title order={5} fw={600}>
-        Announcements
-      </Title>
+      <Title order={5}>Announcements</Title>
 
       <Flex
         direction={{ base: "column", sm: "row" }}
@@ -56,7 +54,12 @@ export const Announcements = () => {
         my={{ base: "md", sm: "sm" }}
       >
         <Search />
-        <Button variant="filled" onClick={open} leftSection={<PlusIcon />}>
+        <Button
+          variant="filled"
+          color="primitive-blue"
+          onClick={open}
+          leftSection={<PlusIcon />}
+        >
           Add
         </Button>
       </Flex>

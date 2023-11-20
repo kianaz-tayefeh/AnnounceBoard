@@ -1,4 +1,4 @@
-import { ActionIcon, Box, Button, Card, Text } from "@mantine/core";
+import { ActionIcon, Button, Card, Text } from "@mantine/core";
 
 import { CardContent } from "src/components/organisms/CardContent";
 import { UserInfo } from "src/components/organisms/UserInfo";
@@ -28,24 +28,15 @@ export const AnnounceInfo: React.FC<AnnounceInfoPropsType> = ({ announce }) => {
       />
       <UserInfo avatar={avatar} username={username} role={role} />
       <CardContent>
-        <Box>
-          <Text
-            size="md"
-            fw={500}
-            mb="md"
-            lh="md"
-            c="premitive-gray"
-            lineClamp={8}
-          >
-            {message}
-          </Text>
-        </Box>
+        <Text size="md" fw={500} lh="md" c="premitive-gray" lineClamp={8}>
+          {message}
+        </Text>
         <Button
           leftSection={termsOfService ? <CheckMarkIcon /> : <ErrorIcon />}
           variant="light"
-          color={`${termsOfService ? "green" : "red"}`}
-          mt="md"
+          color={`${termsOfService ? "primitive-green" : "primitive-red"}`}
           radius="md"
+          mt="md"
         >
           {termsOfService ? "Confirmed" : "Needs confirmation"}
         </Button>
