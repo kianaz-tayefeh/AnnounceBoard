@@ -1,4 +1,4 @@
-# Announce-Board
+# AnnounceBoard
 
 Welcome to Announce-Board, a Vite React project built with Mantine and TypeScript.
 
