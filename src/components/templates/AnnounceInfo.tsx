@@ -28,7 +28,7 @@ export const AnnounceInfo: React.FC<AnnounceInfoPropsType> = ({ announce }) => {
       />
       <UserInfo avatar={avatar} username={username} role={role} />
       <Box>
-        <Text size="md" fw={500} lh="md" c="primitive-gray" lineClamp={7}>
+        <Text size="md" lh="md" c="primitive-gray" lineClamp={7}>
           {message}
         </Text>
         <Button

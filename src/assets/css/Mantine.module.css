@@ -8,6 +8,7 @@
 
 .label {
   color: var(--mantine-color-primitive-gray-6);
+  margin-bottom: 5px;
 }
 
 .modal_footer {
