@@ -44,6 +44,7 @@ export const AnnounceModal: React.FC<AnnounceModalPropsType> = ({
 
     setLocalStorage(LS_ANNOUNCEMENTS_KEY, updatedAnnouncements);
     setAllAnnouncements(updatedAnnouncements);
+    form.reset();
     close();
   };
 

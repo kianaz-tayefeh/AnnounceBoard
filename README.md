@@ -1,5 +1,21 @@
-# Mantine Vite template
+# Announce-Board
 
-Get started with the template by clicking `Use this template` button on the top of the page.
+Welcome to Announce-Board, a Vite React project built with Mantine and TypeScript.
 
-[Documentation](https://mantine.dev/guides/vite/)
+## Getting Started
+
+### `yarn install`
+
+### `yarn dev` and `yarn test`
+
+## Packages Used
+
+- `mantine/core`
+- `mantine/form`
+- `jotai`
+- `date-fns`
+- `uuid`
+
+## Code Style
+
+Configured prettier, eslint and huskey
