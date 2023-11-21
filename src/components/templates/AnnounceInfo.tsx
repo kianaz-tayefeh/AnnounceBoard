@@ -1,12 +1,12 @@
-import { ActionIcon, Button, Card, Text } from "@mantine/core";
+import { ActionIcon, Box, Button, Card, Text } from "@mantine/core";
 
-import { CardContent } from "src/components/organisms/CardContent";
 import { UserInfo } from "src/components/organisms/UserInfo";
 import { CardHeader } from "src/components/organisms/CardHeader";
 import { MoreIcon } from "src/assets/icons/MoreIcon";
 import { IAnnouncement } from "src/interfaces/IAnnouncement";
 import { ErrorIcon } from "src/assets/icons/ErrorIcon";
 import { CheckMarkIcon } from "src/assets/icons/CheckMarkIcon";
+import classes from "src/assets/css/Mantine.module.css";
 
 type AnnounceInfoPropsType = {
   announce: IAnnouncement;
@@ -16,7 +16,7 @@ export const AnnounceInfo: React.FC<AnnounceInfoPropsType> = ({ announce }) => {
   const { title, date, username, avatar, role, message, termsOfService } =
     announce;
   return (
-    <Card withBorder shadow="sm" radius="sm" padding="lg" w="100%" h="100%">
+    <Card withBorder shadow="sm" radius="sm" w="100%" h="100%">
       <CardHeader
         action={
           <ActionIcon variant="subtle" color="gray">
@@ -27,20 +27,23 @@ export const AnnounceInfo: React.FC<AnnounceInfoPropsType> = ({ announce }) => {
         subheader={date}
       />
       <UserInfo avatar={avatar} username={username} role={role} />
-      <CardContent>
-        <Text size="md" fw={500} lh="md" c="premitive-gray" lineClamp={8}>
+      <Box>
+        <Text size="md" fw={500} lh="md" c="primitive-gray" lineClamp={7}>
           {message}
         </Text>
         <Button
           leftSection={termsOfService ? <CheckMarkIcon /> : <ErrorIcon />}
           variant="light"
           color={`${termsOfService ? "primitive-green" : "primitive-red"}`}
-          radius="md"
+          radius="sm"
           mt="md"
+          className={
+            termsOfService ? classes.greenborderbutton : classes.redborderbutton
+          }
         >
           {termsOfService ? "Confirmed" : "Needs confirmation"}
         </Button>
-      </CardContent>
+      </Box>
     </Card>
   );
 };

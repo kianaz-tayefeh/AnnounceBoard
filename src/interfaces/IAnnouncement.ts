@@ -1,8 +1,7 @@
-import { v4 as uuidv4 } from "uuid";
 import { format } from "date-fns";
 
 export interface IAnnouncement {
-  _id: string;
+  id: string;
   title: string;
   date: string;
   username: string;
@@ -13,12 +12,12 @@ export interface IAnnouncement {
 }
 
 export const initialValues: IAnnouncement = {
-  _id: uuidv4(),
+  id: "",
   title: "",
   message: "",
   date: format(new Date(), "MM/dd/yyyy HH:mm 'UTC'XXX"),
   username: "Jack Jacklyne",
-  avatar: "public/images/user.png",
+  avatar: "/images/user.png",
   role: "Production coordinator",
   termsOfService: false,
 };

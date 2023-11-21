@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Checkbox,
   Flex,
@@ -10,10 +11,12 @@ import {
 } from "@mantine/core";
 import { hasLength, useForm } from "@mantine/form";
 import { useAtom } from "jotai";
+import { v4 as uuidv4 } from "uuid";
 
 import { announcementsAtom } from "src/contexts/announcementsAtom";
 import { LS_ANNOUNCEMENTS_KEY, setLocalStorage } from "src/helpers/utils";
 import { IAnnouncement, initialValues } from "src/interfaces/IAnnouncement";
+import classes from "src/assets/css/Mantine.module.css";
 
 type AnnounceModalPropsType = {
   opened: boolean;
@@ -34,9 +37,10 @@ export const AnnounceModal: React.FC<AnnounceModalPropsType> = ({
   });
 
   const handleSubmit = (item: IAnnouncement) => {
+    const newItem = { ...item, id: uuidv4() };
     const updatedAnnouncements = allAnnouncements
-      ? [...allAnnouncements, item]
-      : [item];
+      ? [...allAnnouncements, newItem]
+      : [newItem];
 
     setLocalStorage(LS_ANNOUNCEMENTS_KEY, updatedAnnouncements);
     setAllAnnouncements(updatedAnnouncements);
@@ -65,15 +69,18 @@ export const AnnounceModal: React.FC<AnnounceModalPropsType> = ({
               mt="md"
               label="Announcement is Confirmed"
               {...getInputProps("termsOfService", { type: "checkbox" })}
+              color="primitive-blue"
             />
-            <Group justify="flex-end" mt={{ base: "md", sm: 0 }} gap="md">
-              <Button type="button" variant="outline" onClick={close}>
-                Cancel
-              </Button>
-              <Button type="submit" variant="filled">
-                Save
-              </Button>
-            </Group>
+            <Box component="div" className={classes.modal_footer}>
+              <Group justify="flex-end" gap="md">
+                <Button type="button" variant="outline" onClick={close}>
+                  Cancel
+                </Button>
+                <Button type="submit" variant="filled" color="primitive-blue">
+                  Save
+                </Button>
+              </Group>
+            </Box>
           </Flex>
         </form>
       </Modal>

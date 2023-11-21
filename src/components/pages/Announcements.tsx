@@ -1,9 +1,9 @@
 import { useEffect, useState, useMemo } from "react";
-import { Flex, Button, Title, Box, Grid, Loader } from "@mantine/core";
+import { Flex, Button, Title, Box, Grid, Loader, Divider } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useAtom } from "jotai";
 
-import { Search } from "src/components/templates/Search";
+import { Search } from "src/components/organisms/Search";
 import { AnnounceModal } from "src/components/templates/AnnounceModal";
 import { AnnounceInfo } from "src/components/templates/AnnounceInfo";
 import { PlusIcon } from "src/assets/icons/PlusIcon";
@@ -44,14 +44,17 @@ export const Announcements = () => {
   }, [searchTerm, allAnnouncements]);
 
   return (
-    <Box p="xl" mx="xl">
+    <Box p="xl">
       <AnnounceModal opened={opened} close={close} />
-      <Title order={5}>Announcements</Title>
+
+      <Title order={4}>Announcements</Title>
+      <Divider size="sm" color="black" mb="lg" w={160} />
 
       <Flex
         direction={{ base: "column", sm: "row" }}
         justify="space-between"
         my={{ base: "md", sm: "sm" }}
+        gap={10}
       >
         <Search />
         <Button
@@ -63,6 +66,7 @@ export const Announcements = () => {
           Add
         </Button>
       </Flex>
+
       {loading ? (
         <Loader />
       ) : !filteredAnnouncements.length ? (
@@ -70,7 +74,7 @@ export const Announcements = () => {
       ) : (
         <Grid>
           {filteredAnnouncements.map((announce: IAnnouncement) => (
-            <Grid.Col key={announce._id} span={4}>
+            <Grid.Col key={announce.id} span={{ lg: 4, md: 4, sm: 6, xs: 12 }}>
               <AnnounceInfo announce={announce} />
             </Grid.Col>
           ))}

@@ -1,5 +1,5 @@
-import { createTheme, rem } from "@mantine/core";
-// import classes from "src/assets/css/Demo.module.css";
+import { TextInput, Textarea, createTheme, rem } from "@mantine/core";
+import classes from "src/assets/css/Mantine.module.css";
 
 export const theme = createTheme({
   fontFamily: "Inter",
@@ -8,8 +8,12 @@ export const theme = createTheme({
     sm: rem(13),
     xs: rem(10),
   },
+  spacing: {
+    lg: rem(51),
+    xl: rem(68),
+  },
   colors: {
-    "premitive-gray": [
+    "primitive-gray": [
       "#606060",
       "#606060",
       "#606060",
@@ -22,8 +26,8 @@ export const theme = createTheme({
       "#606060",
     ],
     "primitive-blue": [
-      "#2543CF",
-      "#2543CF",
+      "#C6CAEC",
+      "#C6CAEC",
       "#2543CF",
       "#2543CF",
       "#2543CF",
@@ -34,8 +38,8 @@ export const theme = createTheme({
       "#2543CF",
     ],
     "primitive-green": [
-      "#298545",
-      "#298545",
+      "#A2DAB2",
+      "#E7F6EC40",
       "#298545",
       "#298545",
       "#298545",
@@ -46,8 +50,8 @@ export const theme = createTheme({
       "#298545",
     ],
     "primitive-red": [
-      "#E8214C",
-      "#E8214C",
+      "#FBBAC7",
+      "#FEE4E940",
       "#E8214C",
       "#E8214C",
       "#E8214C",
@@ -58,16 +62,22 @@ export const theme = createTheme({
       "#E8214C",
     ],
   },
-  // components: {
-  //   TextInput: TextInput.extend({
-  //     classNames: {
-  //       label: classes.label,
-  //     },
-  //   }),
-  // },
+  components: {
+    TextInput: TextInput.extend({
+      classNames: {
+        label: classes.label,
+      },
+    }),
+    Textarea: Textarea.extend({
+      classNames: {
+        label: classes.label,
+      },
+    }),
+  },
   headings: {
     sizes: {
-      h5: {
+      h4: {
+        fontSize: rem(20),
         fontWeight: "600",
         lineHeight: "1.5",
       },
