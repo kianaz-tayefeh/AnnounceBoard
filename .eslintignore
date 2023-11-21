@@ -13,6 +13,7 @@ yarn.lock
 *.woff
 *.woff2
 *.eot
+*.md
 
 # production
 build
