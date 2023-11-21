@@ -4,9 +4,9 @@ Welcome to Announce-Board, a Vite React project built with Mantine and TypeScrip
 
 ## Getting Started
 
-### `yarn install`
+`yarn install`
 
-### `yarn dev` and `yarn test`
+`yarn dev` and `yarn test`
 
 ## Packages Used
 
