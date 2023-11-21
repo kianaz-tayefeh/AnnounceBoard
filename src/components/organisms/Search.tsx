@@ -20,7 +20,6 @@ export const Search = () => {
       rightSection={<SearchIcon />}
       rightSectionPointerEvents="none"
       size="md"
-      w={300}
     />
   );
 };

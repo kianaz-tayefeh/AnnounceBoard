@@ -16,7 +16,7 @@ export const AnnounceInfo: React.FC<AnnounceInfoPropsType> = ({ announce }) => {
   const { title, date, username, avatar, role, message, termsOfService } =
     announce;
   return (
-    <Card withBorder shadow="sm" radius="sm" w="100%" h="100%">
+    <Card withBorder shadow="xs" radius="sm" w="100%" h="100%">
       <CardHeader
         action={
           <ActionIcon variant="subtle" color="gray">

@@ -16,7 +16,7 @@ import { searchAtom } from "src/contexts/searchAtom";
 import { announcementsAtom } from "src/contexts/announcementsAtom";
 import { IAnnouncement } from "src/interfaces/IAnnouncement";
 import MockedData from "src/mocks/announcements.json";
-import { EmptyAnnouncementAlert } from "src/components/organisms/EmptyAnnouncementAlert";
+import { EmptyContentAlert } from "src/components/organisms/EmptyContentAlert";
 
 export const Announcements = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -70,7 +70,7 @@ export const Announcements = () => {
       {loading ? (
         <Loader />
       ) : !filteredAnnouncements.length ? (
-        <EmptyAnnouncementAlert />
+        <EmptyContentAlert />
       ) : (
         <Grid>
           {filteredAnnouncements.map((announce: IAnnouncement) => (

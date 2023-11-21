@@ -13,10 +13,10 @@ export const CardHeader: React.FC<CardHeaderPropsType> = ({
   subheader,
 }) => {
   return (
-    <Flex direction={{ base: "column", sm: "row" }} justify="space-between">
+    <Flex direction="row" justify="space-between">
       <Flex direction="column">
         <Title order={5}>{title}</Title>
-        <Text size="sm" c="primitive-gray" fw={400}>
+        <Text size="sm" c="primitive-gray">
           {subheader}
         </Text>
       </Flex>

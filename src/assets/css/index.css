@@ -1,17 +1,15 @@
 @font-face {
   font-family: "Inter";
-  src: url("src/assets/fonts/interfont/inter-v12-latin-ext_latin-500.woff")
-      format("woff"),
+  src: url("src/assets/fonts/interfont/inter-v12-latin-ext_latin-500.woff2")
+      format("woff2"),
     url("src/assets/fonts/interfont/inter-v12-latin-ext_latin-500.woff")
       format("woff"),
+    url("src/assets/fonts/interfont/inter-v12-latin-ext_latin-600.woff2")
+      format("woff2"),
     url("src/assets/fonts/interfont/inter-v12-latin-ext_latin-600.woff")
       format("woff"),
-    url("src/assets/fonts/interfont/inter-v12-latin-ext_latin-600.woff")
-      format("woff"),
-    url("src/assets/fonts/interfont/inter-v12-latin-ext_latin-700.woff")
-      format("woff"),
-    url("src/assets/fonts/interfont/inter-v12-latin-ext_latin-700.woff")
-      format("woff"),
+    url("src/assets/fonts/interfont/inter-v12-latin-ext_latin-700.woff2")
+      format("woff2"),
     url("src/assets/fonts/interfont/inter-v12-latin-ext_latin-700.woff")
       format("woff"),
     url("src/assets/fonts/interfont/inter-v12-latin-ext_latin-regular.woff2")

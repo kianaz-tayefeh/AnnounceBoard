@@ -16,10 +16,8 @@ export const UserInfo: React.FC<UserInfoPropsType> = ({
     <Avatar variant="filled" radius="sm" src={avatar} mr={8} />
 
     <Flex direction={{ base: "column" }} mt={{ base: "sm", sm: 0 }}>
-      <Text size="sm" fw={500}>
-        {username}
-      </Text>
-      <Text size="xs" fw={500} c="dimmed">
+      <Text size="sm">{username}</Text>
+      <Text size="xs" c="dimmed">
         {role}
       </Text>
     </Flex>
