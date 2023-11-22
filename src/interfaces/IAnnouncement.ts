@@ -5,7 +5,7 @@ export interface IAnnouncement {
   title: string;
   date: string;
   username: string;
-  avatar: string;
+  imageurl: string;
   role: string;
   message: string;
   termsOfService: boolean;
@@ -17,7 +17,7 @@ export const initialValues: IAnnouncement = {
   message: "",
   date: format(new Date(), "MM/dd/yyyy HH:mm 'UTC'XXX"),
   username: "Jack Jacklyne",
-  avatar: "/images/user.png",
+  imageurl: "/images/user.png",
   role: "Production coordinator",
   termsOfService: false,
 };

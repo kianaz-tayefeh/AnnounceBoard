@@ -1,23 +1,31 @@
 import React from "react";
-import { Avatar, Flex, Text } from "@mantine/core";
+import { Flex, Image, Text } from "@mantine/core";
 
 type UserInfoPropsType = {
-  avatar: string;
+  imageurl: string;
   username: string;
   role: string;
 };
 
 export const UserInfo: React.FC<UserInfoPropsType> = ({
-  avatar,
+  imageurl,
   username,
   role,
 }) => (
-  <Flex direction={{ base: "column", sm: "row" }} my={{ base: "md", sm: "sm" }}>
-    <Avatar variant="filled" radius="sm" src={avatar} mr={8} />
+  <Flex direction="row" gap={8}>
+    <Image
+      radius="xs"
+      width={32}
+      height={32}
+      src={imageurl}
+      fallbackSrc="/images/playground.png"
+    />
 
     <Flex direction={{ base: "column" }} mt={{ base: "sm", sm: 0 }}>
-      <Text size="sm">{username}</Text>
-      <Text size="xs" c="dimmed">
+      <Text size="xs" c="primitive-gray.8" fw={500}>
+        {username}
+      </Text>
+      <Text size="xxs" c="primitive-gray.5" fw={500}>
         {role}
       </Text>
     </Flex>

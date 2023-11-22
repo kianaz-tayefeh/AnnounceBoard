@@ -16,7 +16,7 @@ export const CardHeader: React.FC<CardHeaderPropsType> = ({
     <Flex direction="row" justify="space-between">
       <Flex direction="column">
         <Title order={5}>{title}</Title>
-        <Text size="sm" c="primitive-gray">
+        <Text size="xs" c="primitive-gray.6" fw={400} mt={4}>
           {subheader}
         </Text>
       </Flex>

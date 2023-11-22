@@ -17,6 +17,7 @@ import { announcementsAtom } from "src/contexts/announcementsAtom";
 import { IAnnouncement } from "src/interfaces/IAnnouncement";
 import MockedData from "src/mocks/announcements.json";
 import { EmptyContentAlert } from "src/components/organisms/EmptyContentAlert";
+import classes from "src/assets/css/Mantine.module.css";
 
 export const Announcements = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -48,13 +49,18 @@ export const Announcements = () => {
       <AnnounceModal opened={opened} close={close} />
 
       <Title order={4}>Announcements</Title>
-      <Divider size="sm" color="black" mb="lg" w={160} />
+      <Divider
+        size="sm"
+        color="primitive-gray.8"
+        className={classes.search_divider}
+      />
 
       <Flex
-        direction={{ base: "column", sm: "row" }}
-        justify="space-between"
-        my={{ base: "md", sm: "sm" }}
+        direction="row"
+        justify={{ base: "flex-start", sm: "space-between" }}
+        align={{ base: "center", sm: "flex-end" }}
         gap={10}
+        mb={22}
       >
         <Search />
         <Button

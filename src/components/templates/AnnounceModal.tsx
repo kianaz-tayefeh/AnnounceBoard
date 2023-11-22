@@ -55,25 +55,24 @@ export const AnnounceModal: React.FC<AnnounceModalPropsType> = ({
       <Modal
         opened={opened}
         onClose={close}
-        title={<Title order={4}>Announcement details</Title>}
-        size="xl"
+        title={
+          <Title order={4} c="primitive-gray.9" ml={9}>
+            Announcement details
+          </Title>
+        }
       >
         <form onSubmit={onSubmit(handleSubmit)}>
-          <Flex
-            direction="column"
-            justify="space-between"
-            gap={{ base: "md", sm: "sm" }}
-          >
+          <Flex direction="column" justify="space-between" gap={12}>
             <TextInput label="Title" {...getInputProps("title")} />
-            <Textarea label="Message" rows={16} {...getInputProps("message")} />
+            <Textarea label="Message" rows={11} {...getInputProps("message")} />
             <Checkbox
-              mt="md"
               label="Announcement is Confirmed"
+              size="sm"
+              mt="md"
               {...getInputProps("termsOfService", { type: "checkbox" })}
-              color="primitive-blue"
             />
             <Box component="div" className={classes.modal_footer}>
-              <Group justify="flex-end" gap="md">
+              <Group justify="flex-end" gap="sm">
                 <Button type="button" variant="outline" onClick={close}>
                   Cancel
                 </Button>

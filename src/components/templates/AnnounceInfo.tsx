@@ -13,10 +13,10 @@ type AnnounceInfoPropsType = {
 };
 
 export const AnnounceInfo: React.FC<AnnounceInfoPropsType> = ({ announce }) => {
-  const { title, date, username, avatar, role, message, termsOfService } =
+  const { title, date, username, imageurl, role, message, termsOfService } =
     announce;
   return (
-    <Card withBorder shadow="xs" radius="sm" w="100%" h="100%">
+    <Card className={classes.card}>
       <CardHeader
         action={
           <ActionIcon variant="subtle" color="gray">
@@ -26,17 +26,17 @@ export const AnnounceInfo: React.FC<AnnounceInfoPropsType> = ({ announce }) => {
         title={title}
         subheader={date}
       />
-      <UserInfo avatar={avatar} username={username} role={role} />
+      <UserInfo imageurl={imageurl} username={username} role={role} />
       <Box>
-        <Text size="md" lh="md" c="primitive-gray" lineClamp={7}>
+        <Text size="sm" lh="xs" c="primitive-gray.6" fw={500} lineClamp={7}>
           {message}
         </Text>
         <Button
-          leftSection={termsOfService ? <CheckMarkIcon /> : <ErrorIcon />}
           variant="light"
+          radius="xs"
+          mt={21}
           color={`${termsOfService ? "primitive-green" : "primitive-red"}`}
-          radius="sm"
-          mt="md"
+          leftSection={termsOfService ? <CheckMarkIcon /> : <ErrorIcon />}
           className={
             termsOfService ? classes.greenborderbutton : classes.redborderbutton
           }
