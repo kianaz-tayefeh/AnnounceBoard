@@ -17,7 +17,7 @@ import { announcementsAtom } from "src/contexts/announcementsAtom";
 import { IAnnouncement } from "src/interfaces/IAnnouncement";
 import MockedData from "src/mocks/announcements.json";
 import { EmptyContentAlert } from "src/components/organisms/EmptyContentAlert";
-import classes from "src/assets/css/Mantine.module.css";
+import classes from "src/assets/css/Announcements.module.css";
 
 export const Announcements = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -50,7 +50,7 @@ export const Announcements = () => {
 
       <Title order={4}>Announcements</Title>
       <Divider
-        size="sm"
+        size="md"
         color="primitive-gray.8"
         className={classes.search_divider}
       />
@@ -63,12 +63,7 @@ export const Announcements = () => {
         mb={22}
       >
         <Search />
-        <Button
-          variant="filled"
-          color="primitive-blue"
-          onClick={open}
-          leftSection={<PlusIcon />}
-        >
+        <Button variant="primary" onClick={open} leftSection={<PlusIcon />}>
           Add
         </Button>
       </Flex>

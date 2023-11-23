@@ -1,0 +1,15 @@
+.input {
+  &::placeholder {
+    color: var(--mantine-color-primitive-gray-5);
+  }
+}
+
+.modal_footer {
+  border-top: 1px solid var(--mantine-color-primitive-gray-1);
+  box-shadow: 0px -1px 10px 0px rgba(39, 39, 39, 0.05);
+  margin: -24px;
+  margin-top: 0px;
+  padding: 24px;
+  background-color: white;
+  position: sticky;
+}

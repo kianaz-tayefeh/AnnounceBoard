@@ -1,7 +1,22 @@
-.root {
+.checkbox_root {
   --checkbox-color: var(--mantine-color-primitive-blue-5);
-  --checkbox-radius: 2px;
-  --modal-size: 813px;
+}
+
+.button_root {
+  border-radius: 3px;
+  font-size: 13px;
+  padding: 8px 16px;
+
+  &[data-variant="primary"] {
+    color: var(--mantine-color-primitive-blue-0);
+    background: var(--mantine-color-primitive-blue-5);
+  }
+
+  &[data-variant="outline"] {
+    color: var(--mantine-color-primitive-blue-5);
+    border: 1px solid var(--mantine-color-primitive-blue-1);
+    background: var(--mantine-color-primitive-blue-0);
+  }
 }
 
 .heading {
@@ -22,9 +37,13 @@
   border: 1px solid var(--mantine-color-primitive-gray-3);
   border-radius: var(--mantine-radius-xs);
   padding: 10px 8px 10px 12px;
-  /* &[placeholder-shown] {
-    color: blue;
-  } */
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+
+  &::placeholder {
+    color: var(--mantine-color-primitive-gray-4);
+  }
 }
 
 .label {
@@ -32,6 +51,14 @@
   margin-bottom: 5px;
   font-size: var(--mantine-font-size-xs);
   font-weight: 500;
+}
+
+.button_label {
+  font-weight: 500;
+}
+
+.checkbox_input {
+  border-radius: 0px;
 }
 
 .checkbox_label {
@@ -44,44 +71,16 @@
   width: 13px;
 }
 
-.search_divider {
-  border-radius: var(--mantine-radius-xxs);
-  margin-top: 13px;
-  margin-bottom: 51px;
-  width: 160px;
-}
-
-.card {
-  border: 1px solid var(--mantine-color-primitive-gray-2);
-  border-radius: var(--mantine-radius-sm);
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
-  row-gap: var(--mantine-spacing-md);
-}
-
-.modalbody {
-  padding: 16px 24px 16px 24px;
-}
-
-.modalcontent {
+.modal_content {
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 5;
-  height: 880px;
+  border-radius: 5px;
 }
 
-.modal_footer {
-  position: sticky;
-  border-top: 1px solid var(--mantine-color-primitive-gray-1);
-  box-shadow: 0px -1px 10px 0px rgba(39, 39, 39, 0.05);
-  margin: -24px;
+.modal_header {
   padding: 24px;
-  height: 88px;
-  margin-top: 188px;
 }
 
-.redborderbutton {
-  border: 1px solid var(--mantine-color-primitive-red-0);
-}
-
-.greenborderbutton {
-  border: 1px solid var(--mantine-color-primitive-green-0);
+.modal_body {
+  padding: 24px;
+  padding-top: 8px;
 }

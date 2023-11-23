@@ -16,7 +16,7 @@ import { v4 as uuidv4 } from "uuid";
 import { announcementsAtom } from "src/contexts/announcementsAtom";
 import { LS_ANNOUNCEMENTS_KEY, setLocalStorage } from "src/helpers/utils";
 import { IAnnouncement, initialValues } from "src/interfaces/IAnnouncement";
-import classes from "src/assets/css/Mantine.module.css";
+import classes from "src/assets/css/AnnounceModal.module.css";
 
 type AnnounceModalPropsType = {
   opened: boolean;
@@ -51,39 +51,53 @@ export const AnnounceModal: React.FC<AnnounceModalPropsType> = ({
   const { getInputProps, onSubmit } = form;
 
   return (
-    <div>
-      <Modal
-        opened={opened}
-        onClose={close}
-        title={
-          <Title order={4} c="primitive-gray.9" ml={9}>
-            Announcement details
-          </Title>
-        }
-      >
-        <form onSubmit={onSubmit(handleSubmit)}>
+    <Modal
+      size={812}
+      opened={opened}
+      onClose={close}
+      withCloseButton={false}
+      overlayProps={{ backgroundOpacity: 0.5 }}
+      title={
+        <Title order={4} c="primitive-gray.9">
+          Announcement details
+        </Title>
+      }
+    >
+      <form onSubmit={onSubmit(handleSubmit)}>
+        <Flex direction="column" justify="space-between" gap={50}>
           <Flex direction="column" justify="space-between" gap={12}>
-            <TextInput label="Title" {...getInputProps("title")} />
-            <Textarea label="Message" rows={11} {...getInputProps("message")} />
+            <TextInput
+              label="Title"
+              placeholder="Medium Placeholder"
+              classNames={{ input: classes.input }}
+              {...getInputProps("title")}
+            />
+            <Textarea
+              label="Message"
+              rows={11}
+              placeholder="Medium Placeholder"
+              classNames={{ input: classes.input }}
+              {...getInputProps("message")}
+            />
             <Checkbox
               label="Announcement is Confirmed"
               size="sm"
               mt="md"
               {...getInputProps("termsOfService", { type: "checkbox" })}
             />
-            <Box component="div" className={classes.modal_footer}>
-              <Group justify="flex-end" gap="sm">
-                <Button type="button" variant="outline" onClick={close}>
-                  Cancel
-                </Button>
-                <Button type="submit" variant="filled" color="primitive-blue">
-                  Save
-                </Button>
-              </Group>
-            </Box>
           </Flex>
-        </form>
-      </Modal>
-    </div>
+          <Box component="div" className={classes.modal_footer}>
+            <Group justify="flex-end" gap="sm">
+              <Button type="button" variant="outline" onClick={close}>
+                Cancel
+              </Button>
+              <Button type="submit" variant="primary">
+                Save
+              </Button>
+            </Group>
+          </Box>
+        </Flex>
+      </form>
+    </Modal>
   );
 };

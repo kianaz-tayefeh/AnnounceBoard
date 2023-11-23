@@ -6,7 +6,7 @@ import { MoreIcon } from "src/assets/icons/MoreIcon";
 import { IAnnouncement } from "src/interfaces/IAnnouncement";
 import { ErrorIcon } from "src/assets/icons/ErrorIcon";
 import { CheckMarkIcon } from "src/assets/icons/CheckMarkIcon";
-import classes from "src/assets/css/Mantine.module.css";
+import classes from "src/assets/css/AnnounceInfo.module.css";
 
 type AnnounceInfoPropsType = {
   announce: IAnnouncement;
@@ -31,18 +31,18 @@ export const AnnounceInfo: React.FC<AnnounceInfoPropsType> = ({ announce }) => {
         <Text size="sm" lh="xs" c="primitive-gray.6" fw={500} lineClamp={7}>
           {message}
         </Text>
-        <Button
-          variant="light"
-          radius="xs"
-          mt={21}
-          color={`${termsOfService ? "primitive-green" : "primitive-red"}`}
-          leftSection={termsOfService ? <CheckMarkIcon /> : <ErrorIcon />}
-          className={
-            termsOfService ? classes.greenborderbutton : classes.redborderbutton
-          }
+        {termsOfService && <Button
+          leftSection={<CheckMarkIcon />}
+          classNames={{ root: classes.btn_root_confirmed, section: classes.btn_section }}
         >
-          {termsOfService ? "Confirmed" : "Needs confirmation"}
-        </Button>
+          Confirmed
+        </Button>}
+        {!termsOfService && <Button
+          leftSection={<ErrorIcon />}
+          classNames={{ root: classes.btn_root_not_confirmed, section: classes.btn_section }}
+        >
+          Needs confirmation
+        </Button>}
       </Box>
     </Card>
   );
