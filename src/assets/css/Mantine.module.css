@@ -3,8 +3,8 @@
 }
 
 .button_root {
-  border-radius: 3px;
-  font-size: 13px;
+  border-radius: var(--mantine-radius-xs);
+  font-size: var(--mantine-font-size-xs);
   padding: 8px 16px;
 
   &[data-variant="primary"] {
@@ -22,14 +22,14 @@
 .heading {
   &:is(h4) {
     color: var(--mantine-color-primitive-gray-8);
-    font-weight: 600;
     font-size: var(--mantine-font-size-xl);
+    font-weight: 600;
   }
 
   &:is(h5) {
-    font-weight: 600;
-    line-height: rem(24);
     font-size: var(--mantine-font-size-md);
+    font-weight: 600;
+    line-height: 24px;
   }
 }
 
@@ -37,7 +37,7 @@
   border: 1px solid var(--mantine-color-primitive-gray-3);
   border-radius: var(--mantine-radius-xs);
   padding: 10px 8px 10px 12px;
-  font-size: 13px;
+  font-size: var(--mantine-font-size-xs);
   line-height: 16px;
   font-weight: 500;
 
@@ -48,9 +48,9 @@
 
 .label {
   color: var(--mantine-color-primitive-gray-6);
-  margin-bottom: 5px;
   font-size: var(--mantine-font-size-xs);
   font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .button_label {
@@ -73,7 +73,7 @@
 
 .modal_content {
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  border-radius: var(--mantine-radius-sm);
 }
 
 .modal_header {
